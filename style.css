@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Monospace', monospace;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar {
+    background-color: var(--bar-bg, #2a2a2a);
+    color: var(--bar-fg, #ffffff);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.widget {
+    display: flex;
+    gap: 5px;
+}
+
+.groupboxitem {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bar-bg, #444444);
+    border: 3px solid;
+    text-align: center;
+    border-color: var(--bar-bg, #444444);
+    color: #404040;
+    border-radius: 4px;
+}
+
+.groupboxitem-active {
+    /* color: var(--bar-fg, #ffff); */
+    border-color: var(--bar-fg, #ffff);
+}
+
+#gws1{
+    border-color: var(--bar-hg, #ffff);
+}
+
+/* .workspace.active { */
+/*     background-color: var(--bar-hg, #00ff00); */
+/* } */
+
+.system-tray {
+    display: flex;
+    gap: 10px;
+}
+
+
+.content {
+    display: flex; /* Coloca los elementos uno al lado del otro */
+    flex-direction: row; /* Asegura que los hijos estén en fila */
+    background-color: var(--content-bg, #1a1a1a);
+    height: 95%; /* Opcional: para ocupar toda la altura de la pantalla */
+}
+
+.window {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido dentro de cada ventana en columna */
+    flex: 1; /* Hace que cada ventana ocupe un 50% del espacio disponible */
+    background-color: var(--sidebar-bg, #2a2a2a);
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    border-style: solid;
+    border-width: 0;
+
+}
+
+.window:hover {
+    border-color: var(--bar-hg, #1a1a1a);
+    border-width: calc(var(--window-border-size, 1) * 1px);
+}
+
+
+.color-controls {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.barcontrol {
+    display: flex;
+    flex-direction: column; /* Cambia el flujo a columna */
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+.color-input {
+    display: flex;
+    justify-content: space-between; /* Alinea etiquetas e inputs */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.color-controls{
+    position: fixed; /* Fija el div en relación a la ventana */
+    top: 50%;        /* Posición en el centro vertical */
+    left: 50%;       /* Posición en el centro horizontal */
+    transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+    width: 25%;
+    /* height: 50%; */
+    /* background-color: lightblue; */
+    text-align: center;
+    /* line-height: 100px; /\* Centra el texto dentro del div *\/ */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto flotante */
+    border-radius: 10px; /* Bordes redondeados */       /* Posición en el centro horizontal */
+}
+
+#contenthunter iframe{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

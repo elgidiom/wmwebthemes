@@ -1,0 +1,19 @@
+/* Contenedor con desplazamiento */
+.scroll-container {
+  display: flex;               /* Los elementos estarán en fila */
+  gap: 10px;                   /* Espacio entre los elementos */
+  overflow-x: auto;            /* Activa el scroll horizontal si es necesario */
+  padding: 10px;
+  flex-wrap: nowrap;           /* Evita que los elementos se acomoden en varias filas */
+}
+
+/* Estilos para los items */
+.itemhunter {
+  flex-shrink: 0;              /* Evita que los elementos se reduzcan */
+  width: 200px;                /* Ancho fijo para cada item */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}

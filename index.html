@@ -36,40 +36,38 @@
     </div>
 
     <div class="bar" id="bottombar">
-   <div>Terminal</div>
-   <div>Status</div>
- </div>
+      <div>Terminal</div>
+      <div>Status</div>
+    </div>
 
- <div class="color-controls" id="colorControls">
-   <h3>Simple theme configuration</h3>
+    <div class="color-controls" id="colorControls">
+      <h3>
+        Simple theme configuration
+      </h3>
+      <div class="color-input">
+        <label>Background</label>
+     <input type="color" id="BarBg" onchange="updateColor('--bar-bg', this.value)">
+   </div>
+      <div class="color-input">
+        <label>Foreground</label>
+     <input type="color" id="BarFg" onchange="updateColor('--bar-fg', this.value)">
+   </div>
+      <div class='color-input'>
+        <label> Highlight </label>
+      <input type="color" id="HG" onchange = "updateColor('--bar-hg', this.value)">
+    </div>
 
-   <div class="barcontrol">
-     <div class="color-input">
-       <label>Background</label>
-       <input type="color" id="BarBg" onchange="updateColor('--bar-bg', this.value)">
-     </div>
-     <div class="color-input">
-       <label>Foreground</label>
-       <input type="color" id="BarFg" onchange="updateColor('--bar-fg', this.value)">
-     </div>
-     <div class='color-input'>
-       <label> Highlight </label>
-       <input type="color" id="HG" onchange = "updateColor('--bar-hg', this.value)">
-     </div>
-
-     <div class="slidewindowborder">
-       <label>Window Border</label>
-       <input type="range" min="0" max="10" value="1" class="slider" id="myRange" onchange = "updateColor('--window-border-size', this.value) " oninput="this.nextElementSibling.value = this.value">
-       <output></output>
-     </div>
-
-     <div id="contenthunter">
-       <h3> Color Hunter palettes </h3>
-       <iframe src="hunter.html" width="100%" height="400" style="border:none;"></iframe>
-     </div>
-
+      <div class="slidewindowborder">
+        <label>Window Border</label>
+     <input type="range" min="0" max="10" value="1" class="slider" id="myRange" onchange = "updateColor('--window-border-size', this.value) " oninput="this.nextElementSibling.value = this.value">
+     <output></output>
    </div>
 
-   <script src="funtions.js"> </script>
+      <div id="contenthunter">
+        <h3>Color Hunter palettes</h3>
+      <iframe src="hunter.html" style="border:none;"></iframe>
+    </div>
+    </div>
+    <script src="funtions.js"> </script>
   </body>
 </html>
